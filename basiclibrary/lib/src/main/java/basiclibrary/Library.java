@@ -3,8 +3,7 @@
  */
 package basiclibrary;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -17,16 +16,50 @@ public class Library {
 //        int[] inputArr = new int[]{1,3,2,4};
 //        System.out.println(containsDuplicates(inputArr));
 
-//        int[][] weeklyMonthTemperatures = {
-//                {66, 64, 58, 65, 71, 57, 60},
-//                {57, 65, 65, 70, 72, 65, 51},
-//                {55, 54, 60, 53, 59, 57, 61},
-//                {65, 56, 55, 52, 55, 62, 57}
-//        };
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
 //
 //        System.out.println(Arrays.toString(arrAvg(weeklyMonthTemperatures)));
+//
+//        int[] Arr ={4,8,15,23,42};
+//        System.out.println(Arrays.toString(insertShiftArray(Arr, 16)));
+
+//        System.out.println(Weather(weeklyMonthTemperatures));
+
+
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String winner = tally(votes);
+        System.out.println(winner + " received the most votes!");
 
     }
+    public static int[] insertShiftArray(int[] arr, int numAdd){
+        int[] newArr = new int[arr.length+1];
+        int mid =(int)Math.ceil(arr.length/2.0);
+        for(int i = 0; i < mid; i++){
+            newArr[i] = arr[i];
+        }
+        newArr[mid] = numAdd;
+        for(int j = mid + 1; j <= arr.length; j++){
+            newArr[j] = arr[j-1];
+        }
+        return newArr;
+    }
+
+
 
     public static int[] roll(int n) {
         int[] rolls = new int[n];
@@ -77,5 +110,56 @@ public class Library {
         }
         return arr[lowestAvgIndex];
     }
+
+
+    public static String Weather(int[][] arr){
+        int high = arr[0][0];
+        int low = arr[0][1];
+        String show = "Never saw temperature: ";
+        String msg="";
+        HashSet<Integer> Temps = new HashSet<>();
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                Temps.add(arr[i][j]);
+                if(arr[i][j] < low){
+                    low = arr[i][j];
+                }
+                if(arr[i][j] > high) {
+                    high = arr[i][j];
+                }
+            }
+        }
+        msg=msg+"High: " + high+"\n";
+        msg=msg+"Low: " + low+"\n";
+        for(int x = low; x < high; x++){
+            if(!Temps.contains(x)){
+                msg=msg+show + x+"\n";
+            }
+        }
+        return msg;
+    }
+
+
+    public static String tally(List<String> votes){
+        HashMap<String, Integer> votesResult = new HashMap<>();
+        String winner = "";
+        int c = 0;
+        for(String name : votes){
+            votesResult.put(name, 0);
+        }
+        for(String name : votes){
+            if(votesResult.get(name) > c){
+                winner = name;
+                c = votesResult.get(name)+1;
+            }
+            else {
+                votesResult.put(name, votesResult.get(name) + 1);
+            }
+        }
+        return winner;
+    }
+
+
+
 
 }
