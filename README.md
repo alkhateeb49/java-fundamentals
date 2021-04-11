@@ -1,6 +1,6 @@
 # java-fundamentals
 
-## basics: Lab01
+## basics:
 ---
 * * Pluralize word <br/>
 takes in word and number and returns a string with the word pluralized with an “s” depending on the number if it is zero, or greater than one.
@@ -12,7 +12,7 @@ accepts an integer n and flips coins until n heads are flipped in a row.
 prints out the current time to the console, second by second.
 
 
-## basiclibrary: Lab02
+## basiclibrary:
 ---
 * * Rolling Dice <br/>
 accepts an integer n and rolls a six-sided dice n times. The method should return an array containing the values of the rolls.
@@ -36,13 +36,11 @@ accepts a List of Strings representing votes and returns one string to show what
 
 --
 
-## linter: Lab03
+## linter:
 ---
 File I/O
 
-* * Linter<br/>
-checks if there are semicolons at the end of a line in js file. If your line doesn't contain "if", "else", end with a "{", "}", or if the line is empty, then you're missing a necessary semicolon in your file. You can expect to see similar to the below in the output, showing you which line is missing a necessary semicolon ,reads a JavaScript file with a given Path, and generates an error message whenever it finds a line that doesn’t end in a semi-colon.
-
+Linter checks if there are semicolons at the end of a line in js file. If your line doesn't contain "if", "else", end with a "{", "}", or if the line is empty, then you're missing a necessary semicolon in your file. You can expect to see similar to the below in the output, showing you which line is missing a necessary semicolon
 
 ## Inheritance and Interfaces
 ---
@@ -55,3 +53,4 @@ checks if there are semicolons at the end of a line in js file. If your line doe
 
 
 Run `./gradlew test` To test the Code.
+
