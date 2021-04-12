@@ -14,8 +14,14 @@ public class Restaurant {
     }
     public Restaurant(String name, int stars, int price) {
         this.name = name;
-        this.stars=stars;
         this.price=price;
+        if(stars>=5){
+            this.stars=5;
+        }else if(stars<=0){
+            this.stars=0;
+        }else{
+            this.stars=stars;
+        }
     }
 
     public void addReview(Review review){

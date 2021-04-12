@@ -53,4 +53,16 @@ Linter checks if there are semicolons at the end of a line in js file. If your l
 
 
 Run `./gradlew test` To test the Code.
+---
+### Inheritance, day 2
+- main
+- - Restaurant.java -> Restaurant class
+- - Review.java -> Review class
+- - Library.java -> main class
+- - Shop.java -> Shop class
+- - Theater.java -> Theater class
 
+Run `./gradlew test` To test the Code.
+
+
+---
