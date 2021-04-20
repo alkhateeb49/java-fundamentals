@@ -2,9 +2,9 @@ inheritance/Shop.java
  inheritance.Shop
 inheritance/Restaurant.java
  inheritance.Restaurant
-inheritance/Review.java
- inheritance.Review
 inheritance/Library.java
  inheritance.Library
+inheritance/Review.java
+ inheritance.Review
 inheritance/Theater.java
  inheritance.Theater

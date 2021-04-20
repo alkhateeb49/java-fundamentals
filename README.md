@@ -46,19 +46,18 @@ Linter checks if there are semicolons at the end of a line in js file. If your l
 ---
 ### Overview Of The Architecture
 
-- main
-- - Restaurant.java -> Restaurant class
-- - Review.java -> Review class
-- - Library.java -> main class
+- - Restaurant.java -> Class that contain  a name, a number of stars betweeen 0 and 5, and a price category
+- - Review.java -> should have a body, an author, and a number of stars.
+- - Library.java -> main class to run the code.
 
 
-Run `./gradlew test` To test the Code.
+Run `./gradlew test` To test the Code. and there are test cases on Test file.
 ---
 ### Inheritance, day 2
 - main
-- - Restaurant.java -> Restaurant class
-- - Review.java -> Review class
-- - Library.java -> main class
+- - Restaurant.java -> Class that contain  a name, a number of stars betweeen 0 and 5, and a price category
+- - Review.java -> should have a body, an author, and a number of stars.
+- - Library.java -> main class to run the code.
 - - Shop.java -> Shop class
 - - Theater.java -> Theater class
 

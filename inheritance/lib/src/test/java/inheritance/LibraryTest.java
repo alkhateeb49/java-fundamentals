@@ -7,5 +7,17 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
+    @Test public void RestaurantTestToString () {
+        Restaurant restaurant=new Restaurant("McDonalds",0,4);
+        System.out.println(restaurant.toString());
+        assertEquals("Test toString method","name is : McDonalds, average stars : NaN, price category, 4",restaurant.toString());
+    }
+
+    @Test public  void  RestaurantTestAddReview(){
+        Restaurant restaurant=new Restaurant("McDonalds",0,4);
+        Review newReview = new Review("ummm its perfect and woow", "Mohamad Alkhateeb",1);
+        restaurant.addReview(newReview);
+        assertEquals("Mohamad Alkhateeb, 1, ummm its perfect and woow",newReview.toString());
+    }
 
 }
