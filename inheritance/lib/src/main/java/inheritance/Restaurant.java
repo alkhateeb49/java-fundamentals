@@ -3,13 +3,13 @@ package inheritance;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant {
-    private String name;
-    //    private int stars;
-    private double averageRating;
+public class Restaurant extends Place {
+//    private String name;
+//    private int stars;
+//    private double averageRating;
     private int price;
-    private int Count;
-    private List<Review> review=new ArrayList<>();
+//    private int Count;
+//    private List<Review> review=new ArrayList<>();
 
     public Restaurant(String name, int stars, int price) {
         setName(name);
@@ -26,17 +26,17 @@ public class Restaurant {
     public void addReview(Review review){
         if (!this.review.contains(review)) {
             this.review.add(review);
-            this.averageRating = this.averageRating + review.numberOfStars;
-            this.Count++;
+            super.averageRating = super.averageRating + review.numberOfStars;
+            super.Count++;
         }else {System.out.println("Review is duplicate");}
     }
 
     public String toString() {
         String output ="";
         output=output+("name is : ");
-        output=output+this.name;
+        output=output+super.name;
         output=output+(", average stars : ");
-        output=output+(this.averageRating/Count);
+        output=output+(averageRating/Count);
         output=output+(", price category, ");
         output=output+(this.price);
         return output;
@@ -46,7 +46,7 @@ public class Restaurant {
     }
 
     public void setName(String name) {
-        this.name = name;
+        super.name = name;
     }
 
     public double getAverageRating() {
@@ -54,7 +54,7 @@ public class Restaurant {
     }
 
     public void setAverageRating(double averageRating) {
-        this.averageRating = averageRating;
+        super.averageRating = averageRating;
     }
 
     public int getPrice() {

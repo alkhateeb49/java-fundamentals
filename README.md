@@ -58,10 +58,10 @@ Run `./gradlew test` To test the Code. and there are test cases on Test file.
 - - Restaurant.java -> Class that contain  a name, a number of stars betweeen 0 and 5, and a price category
 - - Review.java -> should have a body, an author, and a number of stars.
 - - Library.java -> main class to run the code.
-- - Shop.java -> Shop class
-- - Theater.java -> Theater class
+- - Shop.java -> Shop class The users want shops! Create a Shop class.
+- - Theater.java -> Theater class,The users want theaters! Create a Theater class; a Theater should have a name and all of the movies currently showing there. (Strings are fine for the movies; no need to create another class.)
 
-Run `./gradlew test` To test the Code.
+Run `./gradlew test` To test the Code, And see test cases on teset class.
 
 
 ---

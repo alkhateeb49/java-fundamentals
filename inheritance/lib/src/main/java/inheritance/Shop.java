@@ -1,12 +1,16 @@
 package inheritance;
 
-public class Shop {
-    String name;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Shop extends Place {
+//    String name;
     String description;
     String price;
-    int stars;
-    int starsCount;
-    Review review;
+//    private double averageRating;
+//    private int Count;
+//    private List<Review> review=new ArrayList<>();
+
 
     public Shop(String name, String description,String price)
     {
@@ -22,10 +26,10 @@ public class Shop {
     }
 
     public void addReview(Review review){
-        if (this.review!=review) {
-            this.review = review;
-            this.stars = this.stars + review.numberOfStars;
-            this.starsCount++;
+        if (!this.review.contains(review)) {
+            this.review.add(review);
+            this.averageRating = this.averageRating + review.numberOfStars;
+            this.Count++;
         }
     }
 

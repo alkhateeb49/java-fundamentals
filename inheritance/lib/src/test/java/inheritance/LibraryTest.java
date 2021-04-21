@@ -20,4 +20,26 @@ public class LibraryTest {
         assertEquals("Mohamad Alkhateeb, 1, ummm its perfect and woow",newReview.toString());
     }
 
+    @Test public  void  ShopTestAddReview(){
+        Shop Shop=new Shop("McDonalds","Nide place","21$");
+        Review newReview = new Review("ummm its perfect and woow", "Mohamad Alkhateeb",1);
+        Shop.addReview(newReview);
+        assertEquals("Mohamad Alkhateeb, 1, ummm its perfect and woow",newReview.toString());
+    }
+
+    @Test public  void  TheaterTestAddReview(){
+        Theater Theater=new Theater("Masrah Masr");
+        Review newReview = new Review("ummm its perfect and woow", "Mohamad Alkhateeb",1);
+        Theater.addReview(newReview);
+        assertEquals("Mohamad Alkhateeb, 1, ummm its perfect and woow",newReview.toString());
+    }
+
+    @Test public  void  TheaterTestAddReview2(){
+        Theater Theater=new Theater("Masrah Masr");
+        Review newReview = new Review("ummm its perfect and woow", "Mohamad Alkhateeb",1,"Masrah Masr");
+        Theater.addReview(newReview);
+        assertEquals("Mohamad Alkhateeb, 1, ummm its perfect and woow",newReview.toString());
+    }
+
+
 }

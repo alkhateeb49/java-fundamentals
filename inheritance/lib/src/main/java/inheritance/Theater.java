@@ -3,12 +3,13 @@ package inheritance;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Theater {
-    String name;
+public class Theater extends Place{
+//    String name;
     List<String> movieList = new ArrayList<>();
-    int stars;
-    int starsCount;
-    Review review;
+//    private double averageRating;
+//    private int Count;
+//    private List<Review> review=new ArrayList<>();
+
 
     public Theater(String name) {
         this.name = name;
@@ -23,7 +24,7 @@ public class Theater {
         }
     }
     public String toString() {
-        String output =this.name+", "+(this.stars/this.starsCount)+", ";
+        String output =this.name+", "+(this.averageRating/this.Count)+", ";
         for (String movie: this.movieList) {
             output=output+(", ");
             output=output+(movie);
@@ -31,10 +32,10 @@ public class Theater {
         return output;
     }
     public void addReview(Review review){
-        if (this.review!=review) {
-            this.review = review;
-            this.stars = this.stars + review.numberOfStars;
-            this.starsCount++;
+        if (!this.review.contains(review)) {
+            this.review.add(review);
+            this.averageRating = this.averageRating + review.numberOfStars;
+            this.Count++;
         }
     }
 
