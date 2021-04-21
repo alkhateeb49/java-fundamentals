@@ -1,6 +1,7 @@
 package inheritance;
 
 public class Review{
+    private String movieName;
     private String body;
     private String author;
     int numberOfStars;
@@ -10,6 +11,13 @@ public class Review{
     private String price;
 
     public Review(String body, String author, int numberOfStars) {
+        setBody(body);
+        setAuthor(author);
+        setNumberOfStars(numberOfStars);
+    }
+
+    public Review(String body, String author, int numberOfStars,String movieName) {
+        setMovieName(movieName);
         setBody(body);
         setAuthor(author);
         setNumberOfStars(numberOfStars);
@@ -48,4 +56,11 @@ public class Review{
         this.numberOfStars = numberOfStars;
     }
 
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public void setMovieName(String movieName) {
+        this.movieName = movieName;
+    }
 }
